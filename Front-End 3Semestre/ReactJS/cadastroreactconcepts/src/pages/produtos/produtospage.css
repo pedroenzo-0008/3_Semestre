@@ -1,0 +1,112 @@
+.card-produto
+{
+    width: 220px;
+    padding: 10px;
+
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-produto > p
+{
+    color: rgb(0, 0, 0);
+}
+
+.secao-produtos
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+h1
+{
+    display: none;
+}
+
+
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sessao-cadastro {
+  width: 100%;
+  padding: 30px;
+  
+  border-radius: 30px;
+}
+
+
+.sessao-cadastro h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+
+.cadastro {
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 40px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+
+.cadastro label {
+  font-weight: bold;
+  color: #333;
+}
+
+
+.cadastro__entrada {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.cadastro__entrada:focus {
+  border-color: #ff9900;
+  box-shadow: 0 0 0 3px rgba(255,153,0,0.2);
+}
+
+
+.cadastro__btn-cadastrar {
+  margin-top: 10px;
+  padding: 14px;
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cadastro__btn-cadastrar:hover {
+  background-color: #e68a00;
+}
+
+.card-produto img
+{
+    height: 160px;
+}   

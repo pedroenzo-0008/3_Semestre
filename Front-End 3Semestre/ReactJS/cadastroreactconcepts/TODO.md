@@ -1,0 +1,5 @@
+- [ ] Levantar entendimento do componente de produtos (ProdutosPage) e identificar função de cadastro/limpeza.
+- [ ] Ajustar a função Cadastrar para limpar também o campo `imagem` e adicionar `setImagem("")`.
+- [ ] (Opcional) Garantir que não haja limpeza de campos não usados (ex.: função `limparCampos`).
+- [ ] Salvar arquivo e rodar o projeto para validar: após POST cadastrar, inputs ficam vazios.
+- [ ] Atualizar progresso no README/TODO se necessário.

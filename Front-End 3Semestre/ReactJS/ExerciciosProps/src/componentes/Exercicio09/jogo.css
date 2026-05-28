@@ -1,0 +1,30 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.jogo-card {
+  background-color: white;
+  width: 260px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.jogo-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.jogo-card h2 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.jogo-card p {
+  color: #555;
+  margin: 5px 0;
+}

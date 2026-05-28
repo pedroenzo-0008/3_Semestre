@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "nome": "Neymar",
+      "descricao": "10",
+      "preco": 100000,
+      "imagem": "neymar",
+      "id": "c1Sz_p-ATm4"
+    },
+    {
+      "nome": "Cristiano Ronaldo",
+      "descricao": "7",
+      "preco": 777777,
+      "imagem": "cr7",
+      "id": "aOeXN4eObCk"
+    },
+    {
+      "nome": "Lionel Messi",
+      "descricao": "10",
+      "preco": 10000000,
+      "imagem": "messi",
+      "id": "0P0T7BkYylY"
+    },
+    {
+      "nome": "Lewandowski",
+      "descricao": "9",
+      "preco": 900000,
+      "imagem": "lewan",
+      "id": "A75l6pVdx9I"
+    },
+    {
+      "nome": "Harry Kane",
+      "descricao": "10",
+      "preco": 100000,
+      "imagem": "harry",
+      "id": "eG4wTZI7yLY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,79 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "id": "1",
+      "nome": "Pedro",
+      "sobrenome": "Enzo Nunes"
+    },
+    {
+      "id": "2",
+      "nome": "Davi",
+      "sobrenome": "Silva Nunes"
+    },
+    {
+      "nome": "Maria",
+      "Sobrenome": "Ribeiro",
+      "id": "3"
+    },
+    {
+      "nome": "marques",
+      "sobrenome": "nunes",
+      "id": "6"
+    },
+    {
+      "nome": "leonardo",
+      "sobrenome": "nunes",
+      "id": "xN9ZBwKSt64"
+    },
+    {
+      "nome": "fontes",
+      "sobrenome": "pinto",
+      "id": "6Nc1oWm5ESk"
+    },
+    {
+      "nome": "pppp",
+      "sobrenome": "aaaaaaa",
+      "email": "aaaaaaa",
+      "pais": "55",
+      "ddd": "11",
+      "telefone": "123456789",
+      "cep": "04230200",
+      "rua": "Rua Anísio Spínola Teixeira",
+      "numero": "2012",
+      "apto": "",
+      "bairro": "Cidade Nova Heliópolis",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "anotacao": " 123456YUI",
+      "id": "dzKG75DtdpM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

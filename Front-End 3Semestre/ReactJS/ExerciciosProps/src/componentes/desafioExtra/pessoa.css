@@ -1,0 +1,39 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.pessoa-card {
+  background-color: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pessoa-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.pessoa-card h2 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.pessoa-card p {
+  color: #555;
+  margin: 5px 0;
+}

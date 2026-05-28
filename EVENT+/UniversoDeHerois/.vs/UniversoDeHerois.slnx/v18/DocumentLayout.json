@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|c:\\users\\55286872840\\desktop\\3_semestre\\event\u002B\\universodeherois\\bdcontextuniverso_de_herois\\universo_de_heroiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|solutionrelative:bdcontextuniverso_de_herois\\universo_de_heroiscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|c:\\users\\55286872840\\desktop\\3_semestre\\event\u002B\\universodeherois\\controllers\\missocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|solutionrelative:controllers\\missocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|c:\\users\\55286872840\\desktop\\3_semestre\\event\u002B\\universodeherois\\controllers\\heroiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|solutionrelative:controllers\\heroiscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|c:\\users\\55286872840\\desktop\\3_semestre\\event\u002B\\universodeherois\\models\\equipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|solutionrelative:models\\equipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|c:\\users\\55286872840\\desktop\\3_semestre\\event\u002B\\universodeherois\\controllers\\equipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8175545C-CAFC-47A9-AC69-9F3371623006}|UniversoDeHerois.csproj|solutionrelative:controllers\\equipecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Equipe.cs",
+              "DocumentMoniker": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Models\\Equipe.cs",
+              "RelativeDocumentMoniker": "Models\\Equipe.cs",
+              "ToolTip": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Models\\Equipe.cs",
+              "RelativeToolTip": "Models\\Equipe.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T12:03:06.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MissoController.cs",
+              "DocumentMoniker": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Controllers\\MissoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MissoController.cs",
+              "ToolTip": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Controllers\\MissoController.cs",
+              "RelativeToolTip": "Controllers\\MissoController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowFUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T12:00:05.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EquipeController.cs",
+              "DocumentMoniker": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Controllers\\EquipeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EquipeController.cs",
+              "ToolTip": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Controllers\\EquipeController.cs",
+              "RelativeToolTip": "Controllers\\EquipeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T11:59:35.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HeroisController.cs",
+              "DocumentMoniker": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Controllers\\HeroisController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HeroisController.cs",
+              "ToolTip": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\Controllers\\HeroisController.cs",
+              "RelativeToolTip": "Controllers\\HeroisController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T11:54:49.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Universo_de_HeroisContext.cs",
+              "DocumentMoniker": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\BdContextUniverso_de_Herois\\Universo_de_HeroisContext.cs",
+              "RelativeDocumentMoniker": "BdContextUniverso_de_Herois\\Universo_de_HeroisContext.cs",
+              "ToolTip": "C:\\Users\\55286872840\\Desktop\\3_Semestre\\EVENT\u002B\\UniversoDeHerois\\BdContextUniverso_de_Herois\\Universo_de_HeroisContext.cs",
+              "RelativeToolTip": "BdContextUniverso_de_Herois\\Universo_de_HeroisContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-02T11:50:34.571Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

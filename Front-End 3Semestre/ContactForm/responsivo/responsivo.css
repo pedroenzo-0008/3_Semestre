@@ -1,0 +1,37 @@
+/*Desktop first*/
+/*Desktop >= 992px até o infinito*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: blue;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Tablets <= 992px (768px até 992px) */
+@media screen and (max-width: 991px){
+  h1 {
+    color: green;
+  }
+  
+  .icone{
+    display: none;
+  }
+ 
+}
+
+/* Smartphones <= 768px (0px até 767) */
+@media screen and (max-width: 767px){
+    h1{
+        color: white;
+        background-color: pink;
+    }
+    
+    .icone{
+        display: block;
+    }
+}

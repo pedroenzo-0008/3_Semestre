@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*section: borda, padding*/
+.sessao-noticias{
+    
+    width: 800px;
+    height: 920px;
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding:20px;
+    border: 1px dashed salmon;
+        align-items: center;
+    margin: auto;
+}
+
+.noticia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: salmon;
+    color: #fff;
+
+}
+
+
+

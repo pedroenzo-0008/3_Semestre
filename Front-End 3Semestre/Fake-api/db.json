@@ -1,0 +1,109 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Pedro Enzo",
+      "email": "PedroEnzo@gmail.com",
+      "idade": 17
+    },
+    {
+      "nome": "Davi Silva",
+      "email": "DaviSilva@gmail.com",
+      "idade": 14,
+      "id": "2"
+    },
+    {
+      "nome": "Maria",
+      "Sobrenome": "Ribeiro",
+      "id": "FvgMBpBGOvI"
+    }
+  ],
+  "Posts": [
+    {
+      "id": "1",
+      "texto": "Africa Twin",
+      "imagem": "https://i.pinimg.com/736x/c0/aa/e8/c0aae8d0585dc20919c1d309a96bb61d.jpg",
+      "qtdCurtidas": "178k"
+    },
+    {
+      "id": "2",
+      "texto": "S1000RR",
+      "imagem": "https://i.pinimg.com/736x/b5/97/06/b59706b232ff110696d2917f67d3552e.jpg",
+      "qtdCurtidas": "228k"
+    },
+    {
+      "id": "3KhADQxn6f4",
+      "texto": "Tiger 1200",
+      "imagem": "https://i.pinimg.com/1200x/52/a9/7e/52a97efa55f0f74e3bd8c1493cf1a54d.jpg",
+      "qtdCurtidas": "148k"
+    }
+  ],
+  "Frutas": [
+    {
+      "id": "1",
+      "nome": "Banana"
+    },
+    {
+      "id": "2",
+      "nome": "Maça"
+    }
+  ],
+  "Jogos": [
+    {
+      "id": "1",
+      "nome": "Pedro Enzo",
+      "email": "PedroEnzo@gmail.com",
+      "idade": 17
+    },
+    {
+      "id": "2",
+      "nome": "Davi Silva",
+      "email": "DaviSilva@gmail.com",
+      "idade": 14
+    }
+  ],
+  "imc": [
+    {
+      "nome": "Eduardo",
+      "altura": 1.67,
+      "peso": 85,
+      "IMC": "30.48",
+      "situacao": "Obesidade Grau I",
+      "id": "BVcxNIWWPvA"
+    },
+    {
+      "nome": "Henrique",
+      "altura": 2,
+      "peso": 95,
+      "IMC": "23.75",
+      "situacao": "Saudável",
+      "id": "4NCKx1uFbbA"
+    },
+    {
+      "nome": "lucas",
+      "altura": 1.67,
+      "peso": 85,
+      "IMC": "30.48",
+      "situacao": "Obesidade Grau I",
+      "id": "3jJeqClU0-k"
+    },
+    {
+      "nome": "James",
+      "altura": 1.3,
+      "peso": 85,
+      "IMC": "50.30",
+      "situacao": "Obesidade Grau III",
+      "id": "ZkIpeSzI-64"
+    }
+  ],
+  "calculadora": [
+    {
+      "numero1": 2,
+      "numero2": 2,
+      "operacao": "soma",
+      "resultado": "4.00",
+      "id": "n4lbGSBpFmo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

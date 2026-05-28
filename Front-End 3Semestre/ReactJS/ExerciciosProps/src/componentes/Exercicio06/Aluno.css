@@ -1,0 +1,31 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.aluno-card {
+  background-color: white;
+  width: 250px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.aluno-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.aluno-card h2 {
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.aluno-card p {
+  color: #555;
+}

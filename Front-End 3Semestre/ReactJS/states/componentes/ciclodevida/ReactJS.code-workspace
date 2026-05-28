@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../ReviewCSS/bemcss"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ReactJS"
+	}
+}

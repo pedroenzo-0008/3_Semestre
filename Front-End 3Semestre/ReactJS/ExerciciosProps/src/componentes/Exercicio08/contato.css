@@ -1,0 +1,23 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.contato-card {
+  background-color: white;
+  width: 320px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contato-card h2 {
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.contato-card p {
+  margin: 5px 0;
+  color: #555;
+}
