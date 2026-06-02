@@ -1,17 +1,20 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom"
-import CadastroFilme from "../pages/cadastroFilme/cadastroFilme"
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
+import Login from "../pages/login/Login"
+import CadastroFilme from "../pages/cadastroFilme/CadastroFilme"
 import CadastroGenero from "../pages/cadastroGenero/CadastroGenero"
-import Login from "../pages/login/login"
 
-const Rotas = ()=> {
-    return(
+
+const Rotas = () => {
+    
+    return (
         <BrowserRouter>
-        <Routes>
-            <Route element= {<Login />} path= "/"/>
-            <Route element= {<CadastroFilme />} path= "/filmes"/>
-            <Route element= {<CadastroGenero />} path= "/generos"/>
-        </Routes>
+            <Routes>
+                <Route element={<Login />} path="/" />
+                <Route element={<CadastroFilme />} path="/Filmes" />
+                <Route element={<CadastroGenero />} path="/Generos" />
+            </Routes>
         </BrowserRouter>
     )
 }
+
 export default Rotas

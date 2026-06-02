@@ -1,13 +1,6 @@
 import "./Cadastro.css";
 import Botao from "../botao/Botao";
 
-// Destructuring nas props:
-// const Cadastro = ({ 
-//     cadastro, tituloCadastro, valor, setValor, estilo, 
-//     valorSelect, setValorSelect, listaGeneros 
-//   }) => {}
-  
-
 const Cadastro = (props) => {
     return (
         <section className="section_cadastro">
@@ -15,32 +8,47 @@ const Cadastro = (props) => {
                 <h1>{props.tituloCadastro}</h1>
                 <hr />
                 <div className="campos_cadastro">
+                    
+                    {/* Campo Nome */}
                     <div className="campo_cad_nome">
                         <label htmlFor="nome">Nome</label>
-                        <input type="text" name="nome" placeholder={`Digite o nome do ${props.placeholder}`} 
-                        //O valor do input vem de props (estado do componente pai)
-                        value={props.valor}
-                        // Atualiza o estado do pai ao digitar
-                        onChange={(e) => props.setValor(e.target.value)}
+                        <input 
+                            type="text" 
+                            name="nome" 
+                            placeholder={`Digite o nome do ${props.placeholder}`} 
+                            value={props.valor}
+                            onChange={(e) => props.setValor(e.target.value)}
                         />
                     </div>
+
+                    {/* Campo Gênero (aparece só quando visibilidade = "block") */}
                     <div className="campo_cad_genero" style={{ display: props.visibilidade }}>
                         <label htmlFor="genero">Gênero</label>
-                        <select name="genero" id="">
+                        <select 
+                            name="genero" 
+                            value={props.valorSelect} 
+                            onChange={(e) => props.setValorSelect(e.target.value)}
+                        >
                             <option value="">Selecione</option>
-                            <option value="">op 1</option>
-                            <option value="">op 2</option>
-                            <option value="">op 3</option>
+                            {props.listaGeneros && props.listaGeneros.map((genero) => (
+                                <option key={genero.idGenero} value={genero.idGenero}>
+                                    {genero.nome}
+                                </option>
+                            ))}
                         </select>
                     </div>
-                    {/* Botao de Editar */}
-                    {
-                        props.btneditar  && <Botao nomeDoBotao="Cancelar"
-                         funcBtn={(e) => props.cancelarEdicao(e)}
-                        btneditar={props.btneditar}
-                        />}
+
+                    {/* Botão Cancelar (aparece só em modo edição) */}
+                    {props.btneditar && (
+                        <Botao 
+                            nomeDoBotao="Cancelar"
+                            funcBtn={(e) => props.cancelarEdicao(e)}
+                            btneditar={props.btneditar}
+                        />
+                    )}
                     
-                <Botao nomeDoBotao="Cadastrar" funcBtn={(e) => props.funcCadastro(e)} />
+                    {/* Botão Cadastrar */}
+                    <Botao nomeDoBotao="Cadastrar" funcBtn={(e) => props.funcCadastro(e)} />
                 </div>
             </form>
         </section>

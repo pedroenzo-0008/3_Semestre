@@ -71,7 +71,7 @@ const CadastroGeneros = () => {
     }
 
    const excluirGenero = async (item) => {
-      //validação do formulario
+      //validação do formulario 
          const result = await Swal.fire({
             title: "Exclusão de Gênero",
             text: `Tem certeza que deseja excluir o gênero (${item.nome})?`,
