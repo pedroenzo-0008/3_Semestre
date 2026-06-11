@@ -1,6 +1,7 @@
 ﻿using FilmesTorloni.WebAPI.BdContextFilme;
 using FilmesTorloni.WebAPI.Interfaces;
 using FilmesTorloni.WebAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FilmesTorloni.WebAPI.Repositories;
 
@@ -61,13 +62,12 @@ public class FilmeRepository : IFilmeRepository
     {
         try
         {
-            Filme filmeBuscado = _context.Filmes.Find(id.ToString())!;
-
-            return filmeBuscado;
+            return _context.Filmes
+                .Include(f => f.IdGeneroNavigation) // idem para busca individual
+                .FirstOrDefault(f => f.IdFilme == id.ToString())!;
         }
         catch (Exception)
         {
-
             throw;
         }
     }
@@ -111,14 +111,17 @@ public class FilmeRepository : IFilmeRepository
     {
         try
         {
-            List<Filme> ListaFilmes = _context.Filmes.ToList();
-
-            return ListaFilmes;
-
+            return _context.Filmes
+                .Include(f => f.IdGeneroNavigation) // carrega o gênero
+                .ToList();
         }
         catch (Exception)
         {
             throw;
         }
     }
+
+
+
+
 }

@@ -1,20 +1,38 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom"
-import Login from "../pages/login/Login"
-import CadastroFilme from "../pages/cadastroFilme/CadastroFilme"
-import CadastroGenero from "../pages/cadastroGenero/CadastroGenero"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "../pages/login/Login";
+import CadastroFilme from "../pages/cadastroFilme/CadastroFilme";
+import CadastroGenero from "../pages/CadastroGenero/CadastroGenero";
+import PrivateRoute from "./PrivateRoute";
 
 const Rotas = () => {
-    
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route element={<Login />} path="/" />
-                <Route element={<CadastroFilme />} path="/Filmes" />
-                <Route element={<CadastroGenero />} path="/Generos" />
-            </Routes>
-        </BrowserRouter>
-    )
-}
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/Login" element={<Login />} />
+        
+        <Route 
+          path="/cadastro-filmes" 
+          element={
+            <PrivateRoute>
+              <CadastroFilme />
+            </PrivateRoute>
+          } 
+        />
 
-export default Rotas
+        <Route 
+          path="/cadastro-generos" 
+          element={
+            <PrivateRoute>
+              <CadastroGenero />
+            </PrivateRoute>
+          } 
+        />
+
+        {/* Redireciona para login se rota não existir */}
+        <Route path="*" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default Rotas;

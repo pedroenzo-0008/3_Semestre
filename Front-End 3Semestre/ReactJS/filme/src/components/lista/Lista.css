@@ -1,102 +1,151 @@
-.listagem{
-    /* vamos retirar:
-        header: 75px
-        cadastro: 252px
-        footer: 40px */
+/* Layout principal */
+.listagem {
     min-height: calc(100vh - (75px + 252px + 40px));
-
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: center;   /* centraliza horizontalmente */
+    justify-content: center; /* centraliza verticalmente */
     padding: 40px 0;
+    text-align: center;
 }
 
-.listagem h1{
+.listagem h1 {
     text-transform: uppercase;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 .listagem hr {
     max-width: 300px;
     width: 100%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #73061B;
+    border: 2px solid #73061B;
     margin-top: 5px;
 }
 
-.item_lista img{
-    height: 28px;
-}
 
-.tabela{
+/* Tabela */
+.tabela {
     width: 100%;
     margin-top: 30px;
-} 
+    display: flex;
+    justify-content: center; /* tabela no centro */
+}
 
-.tabela table{
-    width: 100%;
-
+.tabela table {
+    width: 90%;
     border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center; /* centraliza conteúdo */
 }
 
-.tabela .table_cabecalho :first-child{
-    width: 300px;
-}
-
-.tabela  .table_cabecalho :nth-child(2){
-    width: 200px;
-}
-
-.tabela  .table_cabecalho th{
-    width: 100px;
-}
-
-.item_lista td{
-    /* desgrudar o item do titulo */
-     padding: 20px 0 10px 0;
-}
-
-.item_lista {
+/* Cabeçalho */
+.tabela .table_cabecalho th {
     text-align: center;
-
-    border-bottom: solid 1px #73061B20;
+    padding: 14px;
+    font-weight: bold;
+    border-bottom: 2px solid #73061B40;
+    background-color: #73061B;
+    color: #fff;
+    font-size: 15px;
 }
 
-@media screen and (max-width: 768px){
-    /* 1px - 768px */
-    .tabela thead{
+/* Corpo da tabela */
+.item_lista td {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;   /* centraliza horizontalmente */
+    vertical-align: middle; /* centraliza verticalmente */
+}
+
+/* Imagem maior e centralizada */
+.item_lista td[data-cell="Imagem"] img {
+    height: 140px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.item_lista td[data-cell="Imagem"] img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para o campo de upload */
+.campo input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 2px dashed #73061B;   /* borda destacada */
+    border-radius: 6px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.campo input[type="file"]:hover {
+    border-color: #a00a2a;
+    background-color: #f9f9f9;
+}
+
+/* Efeito ao focar */
+.campo input[type="file"]:focus {
+    outline: none;
+    border-color: #a00a2a;
+}
+
+/* Ícones de editar/excluir */
+.icon {
+    border: none;
+    background: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    height: 28px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.icon:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .tabela thead {
         display: none;
     }
 
-    /* Um elemento abaixo do outro: */
-    .item_lista td{
+    .item_lista td {
         display: grid;
         text-align: left;
-        padding: 10px 10px 10px 0;
+        padding: 10px;
         grid-template-columns: 10ch auto;
     }
 
-    .item_lista td::before{
-          /* Adiciona o data-cell do html e coloca os : depois */
+    .item_lista td::before {
         content: attr(data-cell) ":";
         font-weight: 700;
         width: 80px;
         text-align: left;
     }
 
-    .item_lista td:last-child{
-        margin-bottom: 24px;
+    .item_lista td[data-cell="Imagem"] img {
+        height: 100px;
     }
-
-    .item_lista td:first-child{
-        margin-top: 24px;
-    }
-}
-
-
-.icon{
-    border: none;
-    background: none;
-    width: fit-content;
 }

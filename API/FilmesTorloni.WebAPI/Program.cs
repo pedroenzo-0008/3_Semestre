@@ -115,6 +115,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseStaticFiles();
 
+
+app.UseStaticFiles();
+
 app.UseAuthentication();
 
 app.UseAuthorization();

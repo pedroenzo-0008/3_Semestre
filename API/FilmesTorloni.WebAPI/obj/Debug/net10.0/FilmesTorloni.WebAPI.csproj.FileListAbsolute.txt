@@ -318,3 +318,4 @@ C:\Users\55286872840\Desktop\3_Semestre\API\FilmesTorloni.WebAPI\bin\Debug\net10
 C:\Users\55286872840\Desktop\3_Semestre\API\FilmesTorloni.WebAPI\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\55286872840\Desktop\3_Semestre\API\FilmesTorloni.WebAPI\obj\Debug\net10.0\FilmesTorloni.WebAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\55286872840\Desktop\3_Semestre\API\FilmesTorloni.WebAPI\bin\Debug\net10.0\FilmesTorloni.WebAPI.staticwebassets.runtime.json
+C:\Users\55286872840\Desktop\3_Semestre\API\FilmesTorloni.WebAPI\obj\Debug\net10.0\FilmesTorloni.WebAPI.sourcelink.json

@@ -50,21 +50,6 @@
               "type": "string",
               "format": "uuid"
             }
-          },
-          {
-            "name": "Nome",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "IdGenero",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "format": "uuid"
-            }
           }
         ],
         "requestBody": {
@@ -73,14 +58,46 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "Imagem": {
+                  "IdFilme": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Nome": {
+                    "type": "string"
+                  },
+                  "ImagemUpload": {
                     "type": "string",
                     "format": "binary"
+                  },
+                  "Imagem": {
+                    "type": "string"
+                  },
+                  "IdGenero": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "NomeGenero": {
+                    "type": "string"
                   }
                 }
               },
               "encoding": {
+                "IdFilme": {
+                  "style": "form"
+                },
+                "Nome": {
+                  "style": "form"
+                },
+                "ImagemUpload": {
+                  "style": "form"
+                },
                 "Imagem": {
+                  "style": "form"
+                },
+                "IdGenero": {
+                  "style": "form"
+                },
+                "NomeGenero": {
                   "style": "form"
                 }
               }
@@ -136,21 +153,37 @@
               "schema": {
                 "type": "object",
                 "properties": {
+                  "IdFilme": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
                   "Nome": {
                     "type": "string"
                   },
-                  "Imagem": {
+                  "ImagemUpload": {
                     "type": "string",
                     "format": "binary"
+                  },
+                  "Imagem": {
+                    "type": "string"
                   },
                   "IdGenero": {
                     "type": "string",
                     "format": "uuid"
+                  },
+                  "NomeGenero": {
+                    "type": "string"
                   }
                 }
               },
               "encoding": {
+                "IdFilme": {
+                  "style": "form"
+                },
                 "Nome": {
+                  "style": "form"
+                },
+                "ImagemUpload": {
                   "style": "form"
                 },
                 "Imagem": {
@@ -158,36 +191,10 @@
                 },
                 "IdGenero": {
                   "style": "form"
+                },
+                "NomeGenero": {
+                  "style": "form"
                 }
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Filme"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Filme"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Filme"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Filme"
               }
             }
           }
@@ -418,39 +425,6 @@
   },
   "components": {
     "schemas": {
-      "Filme": {
-        "type": "object",
-        "properties": {
-          "idFilme": {
-            "maxLength": 40,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "imagem": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "titulo": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "idGenero": {
-            "maxLength": 40,
-            "minLength": 0,
-            "type": "string",
-            "nullable": true
-          },
-          "idGeneroNavigation": {
-            "$ref": "#/components/schemas/Genero"
-          }
-        },
-        "additionalProperties": false
-      },
       "Genero": {
         "type": "object",
         "properties": {
@@ -464,13 +438,6 @@
             "maxLength": 100,
             "minLength": 0,
             "type": "string",
-            "nullable": true
-          },
-          "filmes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Filme"
-            },
             "nullable": true
           }
         },

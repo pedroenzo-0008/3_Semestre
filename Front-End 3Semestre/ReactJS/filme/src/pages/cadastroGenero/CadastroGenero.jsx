@@ -1,202 +1,189 @@
-import Rotas from "../../routes/routes"
-import "./cadastroGenero.css"
-import Header from "../../components/header/Header"
-import Footer from "../../components/footer/Footer"
-import Cadastro from "../../components/cadastro/Cadastro"
-import { useEffect, useState } from "react"
-import api from "../../Services/services.js"
-import Lista from "../../components/lista/Lista"
-import Swal from "sweetalert2"
+import "./cadastroGenero.css";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
+import Cadastro from "../../components/cadastro/Cadastro";
+import { useEffect, useState } from "react";
+import api from "../../Services/services.js";
+import Lista from "../../components/lista/Lista";
+import Swal from "sweetalert2";
 
 const CadastroGeneros = () => {
+  // States
+  const [valor, setValor] = useState("");
+  const [listaGeneros, setListaGeneros] = useState([]);
+  const [editar, setEditar] = useState(false);
+  const [idEditar, setIdEditar] = useState(0);
 
-    // states e variáveis
-    const [valor, setValor] = useState("")
-    const [listaGeneros, setListaGeneros] = useState([])
+  const token = localStorage.getItem("token");
 
-    const [editar, setEditar] = useState(false)
-    const [idEditar, setIdEditar] = useState([])
+const response = await api.post("/Filme", novoFilme, {
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
+});
 
-    // funções
-    const cadastrarGenero = async (e) => {
-        e.preventDefault();
 
-        if (valor.trim().length === 0) {
-            Swal.fire({
-                title: "Cadastro de Genero",
-                text: "O Gênero deve ser preenchido e é obrigatório",
-                icon: "warning"
-            });
-            //alert("O Gênero deve ser preenchido e é obrigatório")
-            return;
-        }
 
-        const objCadastro = {
-            nome: valor
-        }
 
-        try {
-            const retornoAPI = await api.post("/Genero", objCadastro)
+  // Funções
+  const cadastrarGenero = async (e) => {
+    e.preventDefault();
 
-            if (retornoAPI.status === 201) {
-                Swal.fire({
-                    title: "Cadastro de Genero",
-                    text: `(${objCadastro.nome}) foi Cadastrado`,
-                    icon: "success"
-                })
-                //alert(`Gênero (${objCadastro.nome}) cadastrado com sucesso`)
-                setValor("")
-                getGeneros()
-            } else {
-
-                Swal.fire({
-                    title: "Cadastro de Genero",
-                    text: "Erro ao cadastrar gênero",
-                    icon: "error"
-                });
-
-            }
-
-        } catch (erro) {
-            console.erro("Erro ao cadastrar gênero:");
-            console.log(erro)
-        }
+    if (valor.trim().length === 0) {
+      Swal.fire({
+        title: "Cadastro de Gênero",
+        text: "O Gênero deve ser preenchido e é obrigatório",
+        icon: "warning",
+      });
+      return;
     }
 
-    const limparFormulario = () => {
-        setValor("")
-        setEditar(false)
-        setIdEditar(0)
+    const objCadastro = { nome: valor };
 
-    }
+    try {
+      const retornoAPI = await api.post("/Genero", objCadastro);
 
-   const excluirGenero = async (item) => {
-      //validação do formulario 
-         const result = await Swal.fire({
-            title: "Exclusão de Gênero",
-            text: `Tem certeza que deseja excluir o gênero (${item.nome})?`,
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Sim, excluir!",
-            cancelButtonText: "Cancelar"
+      if (retornoAPI.status === 201) {
+        Swal.fire({
+          title: "Cadastro de Gênero",
+          text: `(${objCadastro.nome}) foi cadastrado com sucesso!`,
+          icon: "success",
         });
-
-        if (!result.isConfirmed) {
-            return false;
-        }
-
-
-        try {
-            const retornoAPI = await api.delete(`/Genero/${item.idGenero}`)//chama a api para excluir o genero
-
-            if (retornoAPI.status === 204 || retornoAPI.status === 200) {
-                Swal.fire({
-                    title: "Exclusão de Gênero",
-                    text: `Gênero (${item.nome}) excluído com sucesso!`,
-                    icon: "success"
-                })
-                getGeneros()
-            }
-            console.log(retornoAPI)
-            getGeneros()
-
-        } catch (error) {
-            Swal.fire({
-                title: "Exclusão de Gênero",
-                text: `Não foi possível excluir o gênero (${item.nome}). Ele pode estar associado a um filme!`,
-                icon: "error"
-            })
-        }
-
+        setValor("");
+        getGeneros();
+      } else {
+        Swal.fire({
+          title: "Cadastro de Gênero",
+          text: "Erro ao cadastrar gênero",
+          icon: "error",
+        });
+      }
+    } catch (erro) {
+      console.error("Erro ao cadastrar gênero:", erro);
     }
+  };
 
-    const preEditar = (item) => {
-        setValor(item.nome)
-        setIdEditar(item.idGenero)
-        setEditar(true)
-        console.log(item)
+  const editarGenero = async (e) => {
+    e.preventDefault();
+
+    const objEditar = { nome: valor };
+
+    try {
+      const retornoAPI = await api.put(`/Genero/${idEditar}`, objEditar);
+
+      if (retornoAPI.status === 204 || retornoAPI.status === 200) {
+        Swal.fire({
+          title: "Edição de Gênero",
+          text: `(${objEditar.nome}) editado com sucesso!`,
+          icon: "success",
+        });
+        limparFormulario();
+        getGeneros();
+      } else {
+        Swal.fire({
+          title: "Edição de Gênero",
+          text: "Erro ao editar gênero",
+          icon: "error",
+        });
+      }
+    } catch (error) {
+      console.error("Erro ao editar gênero:", error);
     }
+  };
 
-    const cancelarPreEditar = () => {
-        setEditar(false)
-        setValor("")
-        setIdEditar(0)
+  const excluirGenero = async (item) => {
+    const result = await Swal.fire({
+      title: "Exclusão de Gênero",
+      text: `Tem certeza que deseja excluir o gênero (${item.nome})?`,
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sim, excluir!",
+      cancelButtonText: "Cancelar",
+    });
 
+    if (!result.isConfirmed) return;
+
+    try {
+      const retornoAPI = await api.delete(`/Genero/${item.idGenero}`);
+
+      if (retornoAPI.status === 204 || retornoAPI.status === 200) {
+        Swal.fire({
+          title: "Exclusão de Gênero",
+          text: `(${item.nome}) excluído com sucesso!`,
+          icon: "success",
+        });
+        getGeneros();
+      }
+    } catch (error) {
+      Swal.fire({
+        title: "Exclusão de Gênero",
+        text: `Não foi possível excluir o gênero (${item.nome}). Ele pode estar associado a um filme!`,
+        icon: "error",
+      });
     }
+  };
 
-    const editarGenero = async (e) => {
-        e.preventDefault();
+  const preEditar = (item) => {
+    setValor(item.nome);
+    setIdEditar(item.idGenero);
+    setEditar(true);
+  };
 
-        alert(`Gênero ${valor} | id: ${idEditar} `)
+  const cancelarPreEditar = () => {
+    limparFormulario();
+  };
 
+  const limparFormulario = () => {
+    setValor("");
+    setEditar(false);
+    setIdEditar(0);
+  };
 
-        const objEditar = {
-            nome: valor
-        }
-        try {
-            const retornoAPI = await api.put(`/Genero/${idEditar}`, objEditar)
-            if (retornoAPI.status == 204 || retornoAPI.status == 200) {
-                alert(`Gênero (${objEditar.nome}) editado com sucesso`)
-                limparFormulario()
-                getGeneros()
-            } else {
-                alert("Algum problema aoconteceu ao editar o gênero")
-            }
-        } catch (error) {
-            console.error("Erro ao editar gênero:");
-        }
+  const getGeneros = async () => {
+    try {
+      const retornoAPI = await api.get("/Genero");
+      setListaGeneros(retornoAPI.data);
+    } catch (error) {
+      console.error("Erro ao buscar gêneros:", error);
     }
+  };
 
-    useEffect(() => {
-        //chamar os dados da api
-        getGeneros()
-    }, [])
+  useEffect(() => {
+    getGeneros();
+  }, []);
 
-    const getGeneros = async () => {
-        try {
-            const retornoAPI = await api.get("/Genero")//chama a api
-            const dados = retornoAPI.data//extrai os dados retornados
-            setListaGeneros(dados)//guarda os dados no state(ja exibe na lista)
-        }
-        catch (error) {
-            console.error("Erro ao buscar gêneros:");
-        }
-    }
+  // JSX
+  return (
+    <>
+      <Header />
 
-    // JSX
-    return (
-        <>
-            <Header />
+      <main>
+        <Cadastro
+          tituloCadastro="Cadastro de Gêneros"
+          visibilidade="none"
+          placeholder="Gênero"
+          valor={valor}
+          cancelarEdicao={cancelarPreEditar}
+          setValor={setValor}
+          funcCadastro={editar ? editarGenero : cadastrarGenero}
+          btneditar={editar}
+        />
 
-            <main>
-                <Cadastro
-                    tituloCadastro="Cadastro de Gêneros"
-                    visibilidade="none"
-                    placeholder="Gênero"
-                    valor={valor}
-                    cancelarEdicao={cancelarPreEditar}
-                    setValor={setValor}
-                    funcCadastro={editar ? editarGenero : cadastrarGenero}
-                    btneditar={editar}
-                />
+        <Lista
+          tituloLista="Lista de Gêneros"
+          visibilidade="none"
+          lista={listaGeneros}
+          tipoLista="genero"
+          funcExcluir={excluirGenero}
+          funcPreEditar={preEditar}
+        />
+      </main>
 
-                <Lista
-                    tituloLista="Lista de Gêneros"
-                    visibilidade="none"
-                    lista={listaGeneros}
-                    //chama o metodo para validar
+      <Footer />
+    </>
+  );
+};
 
-                    tipoLista="genero"
-                    funcExcluir={excluirGenero}
-                    funcPreEditar={preEditar} />
-
-            </main>
-
-            <Footer />
-        </>
-    )
-}
-
-export default CadastroGeneros
+export default CadastroGeneros;

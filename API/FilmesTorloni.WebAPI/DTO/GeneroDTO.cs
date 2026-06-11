@@ -2,6 +2,6 @@
 {
     public class GeneroDTO
     {
-        public string? Nome { get; set; }
+        public string Nome { get; set; } = string.Empty;
     }
 }

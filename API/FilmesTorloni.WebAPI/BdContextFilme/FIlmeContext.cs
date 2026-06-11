@@ -32,7 +32,11 @@ public partial class FIlmeContext : DbContext
         {
             entity.HasKey(e => e.IdFilme).HasName("PK__filme__6E8F2A76A4875ED1");
 
-            entity.HasOne(d => d.IdGeneroNavigation).WithMany(p => p.Filmes).HasConstraintName("FK__filme__IdGenero__5EBF139D");
+            // Configuração explícita da chave estrangeira
+            entity.HasOne(d => d.IdGeneroNavigation)
+                .WithMany(p => p.Filmes)
+                .HasForeignKey(d => d.IdGenero) // chave estrangeira
+                .HasConstraintName("FK__filme__IdGenero__5EBF139D");
         });
 
         modelBuilder.Entity<Genero>(entity =>

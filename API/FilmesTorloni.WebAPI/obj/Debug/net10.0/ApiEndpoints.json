@@ -18,35 +18,34 @@
     "Order": 0,
     "Parameters": [
       {
+        "Name": "IdFilme",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
         "Name": "Nome",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Imagem",
+        "Name": "ImagemUpload",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagem",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "IdGenero",
         "Type": "System.Guid",
         "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FilmesTorloni.WebAPI.Controllers.FilmeController",
-    "Method": "PutBody",
-    "RelativePath": "api/Filme",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+      },
       {
-        "Name": "filmeAtualizado",
-        "Type": "FilmesTorloni.WebAPI.Models.Filme",
-        "IsRequired": true
+        "Name": "NomeGenero",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -81,18 +80,33 @@
         "IsRequired": true
       },
       {
+        "Name": "IdFilme",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
         "Name": "Nome",
         "Type": "System.String",
         "IsRequired": false
       },
       {
-        "Name": "Imagem",
+        "Name": "ImagemUpload",
         "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagem",
+        "Type": "System.String",
         "IsRequired": false
       },
       {
         "Name": "IdGenero",
         "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "NomeGenero",
+        "Type": "System.String",
         "IsRequired": false
       }
     ],
